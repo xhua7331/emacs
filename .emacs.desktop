@@ -1,0 +1,79 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Sun Jun 30 18:02:31 2019
+;; Desktop file format version 208
+;; Emacs version 26.2
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (23832 34999 564309 0) (desktop . "208") "xhua@DESKTOP-HH5C374" nil nil ((((minibuffer . t) (undecorated) (skip-taskbar) (font-backend uniscribe gdi) (font . "-outline-Consolas-normal-normal-normal-mono-19-*-*-*-c-*-iso8859-1") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "#eeeeec") (background-color . "#2e3436") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-focus-on-map) (no-accept-focus) (no-special-glyphs) (alpha) (menu-bar-lines . 1) (tool-bar-lines . 0) (height . 32) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 17) (scroll-bar-height . 0) (fullscreen . maximized) (z-group) (visibility . t) (display-type . color) (background-mode . dark) (cursor-color . "#fce94f") (environment) (frameset--id . "372A-4D29-03CD-4889") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . "w32") (explicit-name) (tool-bar-position . top) (width . 127) (left + -8) (top + -8)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 6) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 88) (min-pixel-width . 100) (min-pixel-height-ignore . 44) (min-pixel-width-ignore . 60) (min-pixel-height-safe . 22) (min-pixel-width-safe . 20)) leaf (pixel-width . 1304) (pixel-height . 703) (total-width . 130) (total-height . 31) (normal-height . 1.0) (normal-width . 1.0) (buffer "*scratch*" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 2 t nil 0 t) (vscroll . 0) (dedicated) (point . 146) (start . 1))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("~/.emacs.d/init.el" "~/" "g:/latex-files/det/learn/learn.tex" "g:/latex-files"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "c:/Users/xhua/AppData/Roaming/.emacs.d/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(eldoc-mode linum-mode)
+  223
+  '(114 nil)
+  nil
+  nil
+  '((buffer-display-time 23832 34929 702960 0) (buffer-file-coding-system . utf-8-dos))
+  '((mark-ring (114 48 48 48 48 48 48 57 57 57 57 19 57 19 78 223))))
+
+(desktop-create-buffer 208
+  "c:/Users/xhua/AppData/Roaming/.emacs"
+  ".emacs"
+  'emacs-lisp-mode
+  '(eldoc-mode)
+  1043
+  '(812 nil)
+  nil
+  nil
+  '((buffer-display-time 23832 30031 613524 0) (buffer-file-coding-system . utf-8-dos))
+  '((mark-ring (774 93 387 338 333 622 386 444 449 532 1580 1580 1633 1788 1789 1043))))
+
+(desktop-create-buffer 208
+  nil
+  "Roaming"
+  'dired-mode
+  nil
+  691
+  '(691 nil)
+  t
+  '("c:/Users/xhua/AppData/Roaming/")
+  '((buffer-display-time 23832 29767 464560 0))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "g:/latex-files/_region_.tex"
+  "_region_.tex"
+  'plain-tex-mode
+  nil
+  364
+  '(228 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 23832 29758 674168 0) (buffer-file-coding-system . utf-8-dos))
+  '((mark-ring (364))))
+
+(desktop-create-buffer 208
+  nil
+  "det"
+  'dired-mode
+  nil
+  205
+  '(nil nil)
+  t
+  '("g:/latex-files/det/")
+  '((buffer-display-time 23832 34954 809997 0))
+  '((mark-ring nil)))
+

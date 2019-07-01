@@ -1,0 +1,47 @@
+(tool-bar-mode -1)  ;close tool bar
+(scroll-bar-mode -1);close up scroll bar
+(global-linum-mode t)
+
+;; 关闭缩进 (第二天中被去除)
+;; (electric-indent-mode -1)
+;(linum-mode t)  ;turn up linum mode
+(setq inhibit-splash-screen 1)
+
+(defun open-my-init-file()
+  (interactive)
+  (find-file "~/.emacs.d/init.el")
+  )
+
+
+(global-set-key (kbd "<f2>" ) 'open-my-init-file);f2 to open the initial file
+(global-company-mode 1) ;turn up company补全插件
+(setq-default cursor-type 'bar);change the cursor style
+
+(setq make-backup-files nil);禁止生成备份文件
+
+(require 'recentf);;recentf mode
+(recentf-mode 1)
+(setq recentf-max-menu-item 10)
+
+;; 这个快捷键绑定可以用之后的插件 counsel 代替
+ (global-set-key (kbd "C-x C-r") 'recentf-open-files)
+
+(delete-selection-mode t);;double clicks to replace
+(setq initial-frame-alist (quote ((fullscreen . maximized))))
+
+;;;;;;;;;;;;;;;;;self_customized
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;installed software
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (company auctex))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
