@@ -28,6 +28,8 @@
 		       swiper
 		       counsel ;; together with swiper
 		       smartparens
+		       ;; ---improve the help windows
+		       popwin
 		;; ---enhance m-x ---
 		  ;;     smex
 		;; --- Better Editor ---
@@ -153,6 +155,25 @@
 ;; 设置 org-agenda 打开快捷键
 (global-set-key (kbd "C-c a") 'org-agenda)
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;daythree
+(require 'popwin)
+(popwin-mode 1)
+
+;;缩写补全
+(setq-default abbrev-mode t)
+(define-abbrev-table 'global-abbrev-table '(
+					    ;; Shifu
+					    ("8zl" "zilongshanren")
+					    ;; Tudi
+					    ;; ("8lxy" "lixinyang")
+					    ("8xh" "xhua")
+					   ))
+
+
+
+
+
 ;;;;;;;;;;;;;;;;;self_customized
 
 
@@ -162,7 +183,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (company auctex)))
+ '(package-selected-packages (quote (company auctex))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
