@@ -14,53 +14,51 @@
  (require 'cl)
 
 
- ;; Add Packages
+;; Add Packages
 (defvar xhua7331/packages '(
-		      ;;---edit latex file in emacs
-		        auctex
-		;; --- Auto-completion ---
-		       company
-	         ;; --- Themes ---
-		       monokai-theme
-		 ;; --- Better Editor ---
-		       hungry-delete
-		       swiper
-		       counsel ;; together with swiper
-		       smartparens
-		       ;; ---improve the help windows
-		       popwin
-		;; ---enhance m-x ---
-		  ;;     smex
-		;; --- Better Editor ---
-	;;	hungry-delete
-	;;	swiper
-	;;	counsel
-	;;	smartparens
-		;; --- Major Mode ---
-	;;	js2-mode
-		;; --- Minor Mode ---
-	;;	nodejs-repl
-	;;	exec-path-from-shell
-		;; --- Themes ---
-	;;	monokai-theme
-		;; solarized-theme
-		) "Default packages")
+			    ;;---edit latex file in emacs
+			    auctex
+			    ;; --- Auto-completion ---
+			    company
+			    ;; --- Themes ---
+			    monokai-theme
+			    ;; --- Better Editor ---
+			    hungry-delete
+			    swiper
+			    counsel ;; together with swiper
+			    smartparens
+			    ;; ---improve the help windows
+			    popwin
+			    ;; ---enhance m-x ---
+			    ;;     smex
+			    ;; --- Better Editor ---
+			    ;;	hungry-delete
+			    ;;	swiper
+			    ;;	counsel
+			    ;;	smartparens
+			    ;; --- Major Mode ---
+			    ;;	js2-mode
+			    ;; --- Minor Mode ---
+			    ;;	nodejs-repl
+			    ;;	exec-path-from-shell
+			    ;; --- Themes ---
+			    ;;	monokai-theme
+			    ;; solarized-theme
+			    ) "Default packages")
 
- (setq package-selected-packages xhua7331/packages)
+(setq package-selected-packages xhua7331/packages)
 
- (defun xhua7331/packages-installed-p ()
-     (loop for pkg in xhua7331/packages
-	   when (not (package-installed-p pkg)) do (return nil)
-	   finally (return t)))
+(defun xhua7331/packages-installed-p ()
+  (loop for pkg in xhua7331/packages
+	when (not (package-installed-p pkg)) do (return nil)
+	finally (return t)))
 
- (unless (xhua7331/packages-installed-p)
-     (message "%s" "Refreshing package database...")
-     (package-refresh-contents)
-     (dolist (pkg xhua7331/packages)
-       (when (not (package-installed-p pkg))
-	 (package-install pkg))))
-
-
+(unless (xhua7331/packages-installed-p)
+  (message "%s" "Refreshing package database...")
+  (package-refresh-contents)
+  (dolist (pkg xhua7331/packages)
+    (when (not (package-installed-p pkg))
+      (package-install pkg))))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (global-company-mode 1);;turn up company补全插件
 
