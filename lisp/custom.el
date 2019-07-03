@@ -20,4 +20,7 @@
  '(company-minimum-prefix-length 1)
  '(custom-safe-themes
    (quote
-    ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default))))
+    ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
+ '(package-selected-packages
+   (quote
+    (auctex company monokai-theme hungry-delete swiper counsel smartparens popwin))))

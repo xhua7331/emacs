@@ -11,10 +11,14 @@
 
 ;;add more personal func and place to the top
 
+
+
+
 (require 'init-func)
 (require 'init-packages)
 (require 'init-ui)
 (require 'init-better-defaults)
+(require 'init-latex)
 (require 'init-org)
 (require 'init-keybindings)
 (require 'init-solvequestions) ;;solve questions 
