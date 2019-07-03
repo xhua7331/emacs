@@ -61,6 +61,22 @@
 					try-expand-line
 					try-complete-lisp-symbol-partially
 					try-complete-lisp-symbol))
+;;;;;;;;;;;;;;;;;;;;;;dired-mode setting
+;;;;;;concel recursive inquirement 
+(fset 'yes-or-no-p 'y-or-n-p)        ;; replace yes(y) to y(n)
+(setq dired-recursive-deletes 'always)
+(setq dired-recursive-copies 'always)
 
+(put 'dired-find-alternate-file 'disabled nil)
+;; 主动加载 Dired Mode
+;; (require 'dired)
+;; (defined-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
+
+;; 延迟加载
+(with-eval-after-load 'dired
+  (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
+
+(require 'dired-x)  ;;c-x c-j go open current butter content
+(setq dired-dwin-target t);;operate files in two different buffer contents
 
 (provide 'init-better-defaults)
