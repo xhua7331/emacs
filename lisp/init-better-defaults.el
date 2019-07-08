@@ -79,4 +79,37 @@
 (require 'dired-x)  ;;c-x c-j go open current butter content
 (setq dired-dwin-target t);;operate files in two different buffer contents
 
+;;set the ' not complete
+;;(sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
+;;(sp-local-pair 'lisp-interaction-mode "'" nil :actions nil)
+
+;; 也可以把上面两句合起来
+(sp-local-pair '(emacs-lisp-mode lisp-interaction-mode) "'" nil :actions nil)
+
+;; improve the smart parens
+(define-advice show-paren-function (:around (fn) fix-show-paren-function)
+  "Highlight enclosing parens."
+  (cond ((looking-at-p "\\s(") (funcall fn))
+	(t (save-excursion
+	     (ignore-errors (backward-up-list))
+	     (funcall fn)))))
+;;;;;  set occur mode to scratch the selected strings or region
+
+(defun occur-dwim ()
+  "Call `occur' with a sane default."
+  (interactive)
+  (push (if (region-active-p)
+	    (buffer-substring-no-properties
+	     (region-beginning)
+	     (region-end))
+	  (let ((sym (thing-at-point 'symbol)))
+	    (when (stringp sym)
+	      (regexp-quote sym))))
+	regexp-history)
+  (call-interactively 'occur))
+(global-set-key (kbd "M-s o") 'occur-dwim)
+
+;;;;;; set counsel imenu key
+(global-set-key (kbd "M-s i") 'counsel-imenu)
+
 (provide 'init-better-defaults)

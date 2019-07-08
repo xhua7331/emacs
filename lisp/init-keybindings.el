@@ -17,5 +17,10 @@
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer);;set indent key
 (global-set-key (kbd "M-/") 'hippie-expand) ;;set hippie complete
 
+;;set expand-region 
+(global-set-key (kbd "C-=") 'er/expand-region)
+
+;;;;;;;;;;;; iedit key (default c-; )
+(global-set-key (kbd "M-s e") 'iedit-mode)
 
 (provide 'init-keybindings)

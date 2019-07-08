@@ -8,7 +8,7 @@
 (global-hl-line-mode t);;highlight selected line
 (load-theme 'monokai t) ;;config emacs theme
 
-(delete-selection-mode t);;double clicks to replace
+;;(delete-selection-mode t);;double clicks to replace
 (setq initial-frame-alist (quote ((fullscreen . maximized))));;open with fullscreen
 
 

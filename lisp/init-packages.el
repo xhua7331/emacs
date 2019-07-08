@@ -29,6 +29,13 @@
 			    smartparens
 			    ;; ---improve the help windows
 			    popwin
+			    expand-region
+			    iedit
+;;;;python environment config
+			    elpy
+			    flycheck
+			    py-autopep8
+			    
 			    ;; ---enhance m-x ---
 			    ;;     smex
 			    ;; --- Better Editor ---
@@ -88,4 +95,14 @@
 (require 'popwin)
 (popwin-mode 1)
 
+;;set expand-region key
+;;(require 'expand-region)
+
+;; config python environment
+(elpy-enable)
+
+;;autopep8设置
+(add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
+
+(global-flycheck-mode)
 (provide 'init-packages)
