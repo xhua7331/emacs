@@ -14,7 +14,7 @@
 ;(add-to-list 'load-path "~/.emacs.d/elpa/auctex-12.1.2")
 
 (require 'cdlatex) ;; 载入 cdlatex
-(add-hook 'LaTeX-mode-hook 'turn-on-cdlatex);; 告诉 emacs 打开 latex 文档时打开 cdlatex 插件
+;;(add-hook 'LaTeX-mode-hook 'turn-on-cdlatex);; 告诉 emacs 打开 latex 文档时打开 cdlatex 插件
 
 ;; 设定outline minor mode的前缀快捷键为C-o
 (setq outline-minor-mode-prefix [(control o)])

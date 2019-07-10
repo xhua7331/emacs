@@ -20,9 +20,9 @@
 (require 'init-better-defaults)
 (require 'init-latex)
 (require 'init-org)
-(require 'init-keybindings)
-(require 'init-solvequestions) ;;solve questions 
 
+(require 'init-solvequestions) ;;solve questions 
+(require 'init-keybindings)
 ;;;;;;;;;require custom.el
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 

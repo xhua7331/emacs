@@ -21,6 +21,14 @@
 (global-set-key (kbd "C-=") 'er/expand-region)
 
 ;;;;;;;;;;;; iedit key (default c-; )
-(global-set-key (kbd "M-s e") 'iedit-mode)
+;;(global-set-key (kbd "M-s e") 'iedit-mode)
+
+
+
+;;;;;;;;;;;org-mode key 
+;; 设置 org-agenda 打开快捷键
+(global-set-key (kbd "C-c a") 'org-agenda)
+;; rake remember
+(global-set-key (kbd "C-c r") 'org-capture)
 
 (provide 'init-keybindings)

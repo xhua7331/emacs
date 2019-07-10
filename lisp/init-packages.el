@@ -35,7 +35,9 @@
 			    elpy
 			    flycheck
 			    py-autopep8
-			    
+
+			    ;;org-pomodoro
+			     org-pomodoro
 			    ;; ---enhance m-x ---
 			    ;;     smex
 			    ;; --- Better Editor ---
@@ -96,13 +98,29 @@
 (popwin-mode 1)
 
 ;;set expand-region key
-;;(require 'expand-region)
+(require 'expand-region)
 
-;; config python environment
+;; ;; config python environment
 (elpy-enable)
+;;(elpy-use-ipython)
+;; (setq-default c-basic-offset   4
+;;               tab-width        4
+;;               indent-tabs-mode nil)
+        (setq tab-width 4)
+        (set-variable 'python-indent-offset 4)
+        (set-variable 'python-indent-guess-indent-offset nil)
+
 
 ;;autopep8设置
+(require 'py-autopep8)
 (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
 
-(global-flycheck-mode)
+
+;;config flychek
+(when (require 'flycheck nil t)
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
+;;(global-flycheck-mode)
+(require 'org-pomodoro)
+
 (provide 'init-packages)

@@ -1,0 +1,14 @@
+* 工作安排
+
+** TODO [#B] 
+
+** TODO [#B] Learn emacs 录制
+
+** TODO [#B] Clean Up 悬崖勒马
+   SCHEDULED: <2019-07-09 周二 21:30>
+   :LOGBOOK:
+   CLOCK: [2019-07-10 周三 20:17]
+   :END:
+
+** TODO [#B] 
+
