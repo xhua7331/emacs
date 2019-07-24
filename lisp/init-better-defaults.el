@@ -9,6 +9,7 @@
 
 (setq make-backup-files nil);;禁止生成备份文件
 (setq auto-save-default nil) ;;关闭自动保存文件
+(delete-selection-mode 1)
 ;;(setq create-lockfiles nil)
 
 (require 'recentf);;recentf mode
@@ -38,16 +39,16 @@
   (interactive)
   (indent-region (point-min) (point-max)));;point to a buffer top and bottom
 
-(defun indent-region-or-buffer()
-  (interactive)
-  (save-excursion            ;;save the curse position 
-    (if (region-active-p)
-	(progn
-	  (indent-region (region-beginning) (region-end))
-	  (message "Indent selected region."))
-      (progn
-	(indent-buffer)
-	(message "Indent buffer.")))))
+;; (defun indent-region-or-buffer()
+;;   (interactive)
+;;   (save-excursion            ;;save the curse position 
+;;     (if (region-active-p)
+;; 	(progn
+;; 	  (indent-region (region-beginning) (region-end))
+;; 	  (message "Indent selected region."))
+;;       (prognqq
+;; 	(indent-buffer)
+;; 	(message "Indent buffer.")))))
 
 ;;;;;;;;;;;;;;;; hippie complete
 
@@ -85,6 +86,9 @@
 
 ;; 也可以把上面两句合起来
 (sp-local-pair '(emacs-lisp-mode lisp-interaction-mode) "'" nil :actions nil)
+;;将Lisp-interaction-mode中不使用"'"补全
+(sp-local-pair '(lisp-interaction-mode) "'" nil :actions nil)
+
 
 ;; improve the smart parens
 (define-advice show-paren-function (:around (fn) fix-show-paren-function)

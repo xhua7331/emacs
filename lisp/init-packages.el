@@ -35,9 +35,18 @@
 			    elpy
 			    flycheck
 			    py-autopep8
-
+			    yasnippet
+			    
 			    ;;org-pomodoro
-			     org-pomodoro
+			    org-pomodoro
+			    auto-yasnippet
+			    evil
+			   evil-leader 
+			   window-numbering
+			   powerline
+			   evil-surround
+			   evil-nerd-commenter
+			   which-key
 			    ;; ---enhance m-x ---
 			    ;;     smex
 			    ;; --- Better Editor ---
@@ -122,5 +131,60 @@
   (add-hook 'elpy-mode-hook 'flycheck-mode))
 ;;(global-flycheck-mode)
 (require 'org-pomodoro)
+
+
+;;yasnippets
+;;(yas-reload-all)			
+;;(add-hook 'prog-mode-hook #'yas-minor-mode)
+
+(setq yas-snippet-dirs
+      '("~/.emacs.d/snippets"                 ;; personal snippets
+          ))
+
+(require 'yasnippet)
+(yas-global-mode 1)
+
+
+;;evil
+(evil-mode t)
+(setcdr evil-insert-state-map nil)
+(define-key evil-insert-state-map [escape] 'evil-normal-state)
+;; evil-leader 
+(global-evil-leader-mode)
+(evil-leader/set-key
+  "e" 'find-file
+  "b" 'switch-to-buffer
+  "k" 'kill-buffer
+  "0"  'select-window-0
+  "1"  'select-window-1
+  "2"  'select-window-2
+  "3"  'select-window-3
+;;  "w/" 'split-window-right  
+;;  "w-" 'split-window-below
+  ;;":"  'counsel-M-x  ;; space + : 执行命令
+;;  "wM" 'delete-other-windows
+  ) 
+
+;;window-numbering
+(window-numbering-mode 1) 
+
+;;powerline
+;;(require 'powerline)			
+;;(powerline-default-theme)
+
+;;evil-surround
+(require 'evil-surround)
+(global-evil-surround-mode 1)
+;; evil-nerd-commenter
+;;  (evilnc-default-hotkeys)
+;; (global-set-key (kbd "M-;") 'evilnc-comment-or-uncomment-lines)
+
+;; (define-key evil-normal-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
+;; (define-key evil-visual-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
+
+;; which-key
+(require 'which-key)
+(which-key-mode)
+(which-key-setup-side-window-right)
 
 (provide 'init-packages)

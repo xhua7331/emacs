@@ -14,7 +14,8 @@
 ;;(global-set-key (kbd "c-h c-v") 'find-variable)
 ;;(global-set-key (kbd "c-h c-k") 'find-function-on-key)
 (global-set-key (kbd "C-c p f") 'counsel-git)
-(global-set-key (kbd "C-M-\\") 'indent-region-or-buffer);;set indent key
+
+;;(global-set-key (kbd "C-M-\\") 'indent-region-or-buffer);;set indent key
 (global-set-key (kbd "M-/") 'hippie-expand) ;;set hippie complete
 
 ;;set expand-region 
@@ -31,4 +32,18 @@
 ;; rake remember
 (global-set-key (kbd "C-c r") 'org-capture)
 
+
+;; change company m-n to c-n
+(with-eval-after-load 'company
+  (define-key company-active-map (kbd "M-n") nil)
+  (define-key company-active-map (kbd "M-p") nil)
+  (define-key company-active-map (kbd "C-n") #'company-select-next)
+  (define-key company-active-map (kbd "C-p") #'company-select-previous))
+
+;;auto-snippets
+(global-set-key (kbd "H-w") #'aya-create)
+(global-set-key (kbd "H-y") #'aya-expand)
+
+;;use c-w to delete a backword
+;;(global-set-key (kbd "C-w") 'backward-kill-word)
 (provide 'init-keybindings)

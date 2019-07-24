@@ -18,7 +18,8 @@
  ;; If there is more than one, they won't work right.
  '(cdlatex-command-alist
    (quote
-    (("nexm" "use nexm replace exm" "\\begin{nexm}{?}{}
+    (("nd" "use nd replace node" "(?) node[anchor=west] {$  $ }" cdlatex-position-cursor nil t t)
+     ("nexm" "use nexm replace exm" "\\begin{nexm}{?}{}
 
 \\end{nexm}" cdlatex-position-cursor nil t nil)
      ("sv" "use sv to replace shaded and verbatim environment" "\\begin{shaded}
@@ -38,10 +39,13 @@
  '(custom-safe-themes
    (quote
     ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
+ '(evil-leader/leader "SPC")
+ '(evil-want-C-u-scroll t)
+ '(org-pomodoro-length 40)
  '(org-pomodoro-long-break-length 45)
  '(package-selected-packages
    (quote
-    (auctex company monokai-theme hungry-delete swiper counsel smartparens popwin)))
+    (evil-nerd-commenter evil-surround powerline window-numbering evil-leader evil auctex company monokai-theme hungry-delete swiper counsel smartparens popwin)))
  '(popwin:popup-window-position (quote right))
  '(popwin:popup-window-width 50)
  '(show-paren-mode t)
