@@ -91,12 +91,19 @@
 
 
 ;; improve the smart parens
-(define-advice show-paren-function (:around (fn) fix-show-paren-function)
-  "Highlight enclosing parens."
-  (cond ((looking-at-p "\\s(") (funcall fn))
+;; (define-advice show-paren-function (:around (fn) fix-show-paren-function)
+;;   "Highlight enclosing parens."
+;;   (cond ((looking-at-p "\\s(") (funcall fn))
+;; 	(t (save-excursion
+;; 	     (ignore-errors (backward-up-list))
+;; 	     (funcall fn)))))	
+(defadvice show-paren-function (around fix-show-paren-function activate)
+  (cond ((looking-at-p "\\s(") ad-do-it)
 	(t (save-excursion
 	     (ignore-errors (backward-up-list))
-	     (funcall fn)))))
+	     ad-do-it)))
+  )
+
 ;;;;;  set occur mode to scratch the selected strings or region
 
 (defun occur-dwim ()

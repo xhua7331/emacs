@@ -7,6 +7,15 @@
 (package-initialize)
 ;;;;;;;;;;;;;;;;;;;;;;;
 
+(require 'cask "C:/Users/xhua/.cask/cask.el")
+(cask-initialize)
+;;activate the pallet
+(require 'pallet)
+(pallet-mode t)
+
+
+
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
 ;;add more personal func and place to the top

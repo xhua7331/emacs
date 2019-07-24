@@ -1,83 +1,84 @@
 
 
 
-;;;;;;;;;;;;;;;;;;;;;;;set packages resource
-(when (>= emacs-major-version 24)
-     (require 'package)
-    ;; (package-initialize)
-     (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-		      ("melpa" . "http://elpa.emacs-china.org/melpa/"))))
+;;;; ;;;;;;;;;;;;;;;;;;;;;set packages resource
+;; (when (>= emacs-major-version 24)
+;;      (require 'package)
+;;     ;; (package-initialize)
+;;      (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
+;; 		      ("melpa" . "http://elpa.emacs-china.org/melpa/"))))
 
-;; 注意 elpa.emacs-china.org 是 Emacs China 中文社区在国内搭建的一个 ELPA 镜像
+;; ;; 注意 elpa.emacs-china.org 是 Emacs China 中文社区在国内搭建的一个 ELPA 镜像
 
- ;; cl - Common Lisp Extension
- (require 'cl)
+;;  ;; cl - Common Lisp Extension
+;;  (require 'cl)
 
 
-;; Add Packages
-(defvar xhua7331/packages '(
-			    ;;---edit latex file in emacs
-			    auctex
-			    ;; --- Auto-completion ---
-			    company
-			    ;; --- Themes ---
-			    monokai-theme
-			    ;; --- Better Editor ---
-			    hungry-delete
-			    swiper
-			    counsel ;; together with swiper
-			    smartparens
-			    ;; ---improve the help windows
-			    popwin
-			    expand-region
-			    iedit
-;;;;python environment config
-			    elpy
-			    flycheck
-			    py-autopep8
-			    yasnippet
+;; ;; Add Packages
+;; (defvar xhua7331/packages '(
+;; 			    ;;---edit latex file in emacs
+;; 			    auctex
+;; 			    ;; --- Auto-completion ---
+;; 			    company
+;; 			    ;; --- Themes ---
+;; 			    monokai-theme
+;; 			    ;; --- Better Editor ---
+;; 			    hungry-delete
+;; 			    swiper
+;; 			    counsel ;; together with swiper
+;; 			    smartparens
+;; 			    ;; ---improve the help windows
+;; 			    popwin
+;; 			    expand-region
+;; 			    iedit
+;; ;;;;python environment config
+;; 			    elpy
+;; 			    flycheck
+;; 			    py-autopep8
+;; 			    yasnippet
 			    
-			    ;;org-pomodoro
-			    org-pomodoro
-			    auto-yasnippet
-			    evil
-			   evil-leader 
-			   window-numbering
-			   powerline
-			   evil-surround
-			   evil-nerd-commenter
-			   which-key
-			    ;; ---enhance m-x ---
-			    ;;     smex
-			    ;; --- Better Editor ---
-			    ;;	hungry-delete
-			    ;;	swiper
-			    ;;	counsel
-			    ;;	smartparens
-			    ;; --- Major Mode ---
-			    ;;	js2-mode
-			    ;; --- Minor Mode ---
-			    ;;	nodejs-repl
-			    ;;	exec-path-from-shell
-			    ;; --- Themes ---
-			    ;;	monokai-theme
-			    ;; solarized-theme
-			    ) "Default packages")
+;; 			    ;;org-pomodoro
+;; 			    org-pomodoro
+;; 			    auto-yasnippet
+;; 			    evil
+;; 			   evil-leader 
+;; 			   window-numbering
+;; 			   powerline
+;; 			   evil-surround
+;; 			   evil-nerd-commenter
+;; 			   which-key
+;; 			    ;; ---enhance m-x ---
+;; 			    ;;     smex
+;; 			    ;; --- Better Editor ---
+;; 			    ;;	hungry-delete
+;; 			    ;;	swiper
+;; 			    ;;	counsel
+;; 			    ;;	smartparens
+;; 			    ;; --- Major Mode ---
+;; 			    ;;	js2-mode
+;; 			    ;; --- Minor Mode ---
+;; 			    ;;	nodejs-repl
+;; 			    ;;	exec-path-from-shell
+;; 			    ;; --- Themes ---
+;; 			    ;;	monokai-theme
+;; 			    ;; solarized-theme
+;; 			    ) "Default packages")
 
-(setq package-selected-packages xhua7331/packages)
+;; (setq package-selected-packages xhua7331/packages)
 
-(defun xhua7331/packages-installed-p ()
-  (loop for pkg in xhua7331/packages
-	when (not (package-installed-p pkg)) do (return nil)
-	finally (return t)))
+;; (defun xhua7331/packages-installed-p ()
+;;   (loop for pkg in xhua7331/packages
+;; 	when (not (package-installed-p pkg)) do (return nil)
+;; 	finally (return t)))
 
-(unless (xhua7331/packages-installed-p)
-  (message "%s" "Refreshing package database...")
-  (package-refresh-contents)
-  (dolist (pkg xhua7331/packages)
-    (when (not (package-installed-p pkg))
-      (package-install pkg))))
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (unless (xhua7331/packages-installed-p)
+;;   (message "%s" "Refreshing package database...")
+;;   (package-refresh-contents)
+;;   (dolist (pkg xhua7331/packages)
+;;     (when (not (package-installed-p pkg))
+;;       (package-install pkg))))
+;; ;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (global-company-mode 1);;turn up company补全插件
 
 
