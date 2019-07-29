@@ -1,0 +1,37 @@
+# -*- mode: snippet -*-
+# name:four places to place devices 
+# key: fd
+# --
+  \draw
+  (${1:devices}) to node[coordinate] (s1){}
+  (${2:devices})
+  ++ (2,0) node[coordinate] (s3){}
+  ++ (0,-2) node[coordinate] (s4){}
+  ++ (-2,0) node[coordinate] (s2){}
+
+
+  (s1) to [${3:devices}] ++ (0,-1) to[${4:devices}]  (s2)
+  (s3) to [${5:devices}] ++ (0,-1) to[${6:devices}] (s4)
+  (s1) to [short] (s3)
+  (s2) to [short] (s4)
+  ($(s1)!.5!(s2)$)node[coordinate](o1){}
+  
+to[R,v=$v_o$,i=$i_{o}$][t=load]
+($(s3)!.5!(s4)$)node[coordinate] (02){}
+
+(s1) to [short,-o] ++ (-1,0)
+(s2) to [short,-o] ++ (-1,0)
+;
+\draw
+(s1) node [anchor = south] {$  s1 $}
+(s2) node [anchor = north] {$  s2 $}
+(s3) node [anchor = south] {$  s3 $}
+(s4) node [anchor = north] {$  s4 $}
+;
+% (s1.C) to [short] (s3.C)
+  % (s2.E) to [short] (s4.E)
+  % (s1.E) to [short] (s2.C)
+  % (s3.E) to [short] (s4.C)
+  % ($(s1.E)!0.5!(s2.C)$) 
+  % ($(s3.E)!.5!(s4.C)$)
+  $0

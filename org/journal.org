@@ -1,0 +1,40 @@
+
+* 2019
+** 2019-07 七月
+*** 2019-07-17 星期三
+**** [2019-07-17 周三 19:28] - 7月要做的事
+emacs and vim
+python and scrape
+
+power electronics   3hours 
+english california  3 hours 
+literature reading   3hours 
+
+
+9:00 - 12:00  3hours  literature reading 
+14:00 17:30  3.5hours  待办事项 power electronics
+19:00 - 22:00 3 hours  english learning and emacs vim 
+
+23:00 - 0:00 1 hours
+**** [2019-07-17 周三 19:30] - want to do
+1. write notes for power electronics
+2. draw circuitikz and write circuit notes
+3. collect information about zhihu in english bonus
+4. learn tips involved in reading literature  and take notes  (mind mapping)
+5. master' course selecting
+
+**** [2019-07-17 周三 20:13] - python book finding in wechat
+**** [2019-07-17 周三 22:45] - mind management notes method
+*** 2019-07-18 星期四
+**** [2019-07-18 周四 23:36] - 怎么快速选中一个单词 或者括号内的内容
+*** 2019-07-19 星期五
+**** [2019-07-19 周五 22:53] - wordly wise 3000
+**** [2019-07-19 周五 22:54] - word root
+*** 2019-07-20 星期六
+**** [2019-07-20 周六 00:10] - install 英语图解词典
+*** 2019-07-21 星期日
+**** [2019-07-21 周日 12:06] - python 爬公众号文章
+**** [2019-07-21 周日 13:45] - c-h f :quick-calc
+*** 2019-07-24 星期三
+**** [2019-07-24 周三 12:52] - use tabnew tabn tabp etc.in emacs like vim
+     

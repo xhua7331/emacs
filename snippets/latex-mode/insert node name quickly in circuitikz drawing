@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: insert node name quickly in circuitikz drawing
+# key: nd
+# --
+(${1:node name}) node [anchor = west] {$  $0 $}

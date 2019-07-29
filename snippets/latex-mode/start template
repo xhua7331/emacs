@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name:start template
+# key: st
+# --
+\documentclass[UTF8,a4paper]{ctexart}
+
+\input{format/xhua_package.tex}
+\input{format/xhua_format.tex}
+
+
+\begin{document}
+
+$0
+
+\end{document}

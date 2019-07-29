@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: node coordinate
+# key: node
+
+# --
+node [coordinate] (${1:name}){$0}

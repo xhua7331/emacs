@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: fillin self-define
+# key: fi
+# --
+\fillin[${1:contents}]

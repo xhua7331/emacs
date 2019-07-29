@@ -45,7 +45,7 @@
  '(org-pomodoro-long-break-length 45)
  '(package-selected-packages
    (quote
-    (abc-mode auto-yasnippet elpy expand-region find-file-in-project flycheck goto-chg highlight-indentation iedit org-pomodoro pkg-info py-autopep8 pyvenv undo-tree which-key yasnippet ansi package-build shut-up epl git commander f dash s pallet evil-nerd-commenter evil-surround powerline window-numbering evil-leader evil auctex company monokai-theme hungry-delete swiper counsel smartparens popwin)))
+    (use-package abc-mode auto-yasnippet elpy expand-region find-file-in-project flycheck goto-chg highlight-indentation iedit org-pomodoro pkg-info py-autopep8 pyvenv undo-tree which-key yasnippet ansi package-build shut-up epl git commander f dash s pallet evil-nerd-commenter evil-surround powerline window-numbering evil-leader evil auctex company monokai-theme hungry-delete swiper counsel smartparens popwin)))
  '(popwin:popup-window-position (quote right))
  '(popwin:popup-window-width 50)
  '(show-paren-mode t)

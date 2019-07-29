@@ -1,0 +1,43 @@
+* 工作安排
+** TODO lean emacs
+   DEADLINE: <2019-07-01 ÖÜÒ» 18:00> SCHEDULED: <2019-07-01 ÖÜÒ» 16:00>
+** TODO lean elisp
+   SCHEDULED: <2019-07-01 ÖÜÒ» 17:20>
+** TODO hacking emacs
+   SCHEDULED: <2019-07-01 ÖÜÒ» 19:20>
+** TODO regular expression 
+** DONE [#B] install a dictionary for windows system
+   DEADLINE: <2019-07-11 周四 23:30> SCHEDULED: <2019-07-11 周四 23:00>
+
+** TODO [#B] learn python
+   DEADLINE: <2019-07-11 周四 21:50> SCHEDULED: <2019-07-11 周四 19:50>
+
+** DONE [#B] download documents about power electronics
+   DEADLINE: <2019-07-14 周日 21:00> SCHEDULED: <2019-07-14 周日 19:00>
+
+** DONE [#B] use python to download the essay automatically 
+   DEADLINE: <2019-08-01 周四>
+
+** DONE [#B]circitikz learn 2 hours 
+   DEADLINE: <2019-07-15 周一 21:00> SCHEDULED: <2019-07-15 周一 19:13>
+
+** DONE [#B] mathmatica 2 hours  
+   DEADLINE: <2019-07-16 周二 13:00> SCHEDULED: <2019-07-16 周二 10:00>
+
+** TODO [#B] 145pages in mathmatica 
+
+** TODO [#B] emacs and vim 
+
+** TODO  how to draw 3 phase sinusoidal wave  
+
+** DONE [#B] install psim software and watch video about it in youtube 
+   SCHEDULED: <2019-07-17 周三 20:00>
+
+** DONE [#B] watch video about psim   
+   SCHEDULED: <2019-07-17 周三 23:00>
+
+** TODO [#B] learn emacs 
+   DEADLINE: <2019-07-17 周三 21:30> SCHEDULED: <2019-07-17 周三 20:20>
+
+** TODO [#B] draw circuitikz 
+

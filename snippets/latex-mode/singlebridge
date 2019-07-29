@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name:singlebridge  
+# key: sh
+# --
+\draw
+(${1:coordinate}) to node[nigbt] (s1){}
+  (${2:coordinate})
+  ++ (2,0) node[nigbt] (s3){}
+  ++ (0,-2) node[nigbt] (s4){}
+  ++ (-2,0) node[nigbt] (s2){}
+
+  (s1.C) to [short] (s3.C)
+  (s2.E) to [short] (s4.E)
+  (s1.E) to [short] (s2.C)
+  (s3.E) to [short] (s4.C)
+  ($(s1.E)!0.5!(s2.C)$) 
+  ($(s3.E)!.5!(s4.C)$)
+  $0
